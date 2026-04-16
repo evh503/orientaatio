@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitus 18- Ikäluokka</title>
+</head>
+<body>
+  <p>Anna ikäsi</p>
+  <input type="number" id="luku1" placeholder="ikä:">
+  <button onclick="ikaTarkistus()">Tarkista</button>
+  <p id="vastaus"></p>
+
+  <script>
+    function ikaTarkistus() {
+      ika = Number(document.getElementById("luku1").value);
+      if (ika < 13) {
+        document.getElementById("vastaus").innerText = "lapsi";
+      }
+      else if (ika >= 13 && ika <= 19) {
+        document.getElementById("vastaus").innerText = "nuori";
+      }
+      else {
+        document.getElementById("vastaus").innerText = "aikuinen";
+      }
+    }
+  </script>
+</body>
+</html>
+

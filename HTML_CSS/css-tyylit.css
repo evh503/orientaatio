@@ -1,0 +1,26 @@
+CSS-tyylit
+
+Sääntö:
+    - Selektori: Määrää mitä elementtejä sääntö koskee.
+        - Voi olla vain elementin nimi.
+    - Deklaraatiolohko: Sisältää määrittelyt, jotka muokkaavat
+    kohteena olevan elementin ulkoasua.
+        - Päättyy aina puolipisteeseen.
+
+Deklaraatio:
+    - Ominaisuuden nimi: määrittää, mitä tyyliominaisuutta muokataan.
+    - Arvo: määrittää ominaisuuden uuden arvon.
+    - Erotetaan toisistaan aina kaksoispisteellä.
+    - Lohko voi sisältää useamman deklaraation. Esim:
+
+p { margin: lem;
+    margin-bottom: 2em;
+    font-size: 80%;
+    line-height: 1.4;}
+
+Tyylisääntöjen liittäminen
+ 
+Kolme tapaa:
+    - Tiedostoviittaus link-elementin avulla. Koskea niitä joihin liitetty.
+    - Sijoitetaan head-osioon style-elementin sisälle. Koskee vain tiedostoa.
+    - HTML-elementin aloitustagiin style-määritteenä. Koskee vain elementtiä.

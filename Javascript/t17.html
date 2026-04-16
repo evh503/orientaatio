@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitus 17 - Laske summa</title>
+</head>
+<body>
+  <p>Anna kaksi lukua</p>
+  <input type="number" id="luku1" placeholder="Anna luku 1">
+  <input type="number" id="luku2" placeholder="Anna luku 2">
+  <button onclick="summa()">Summaa</button>
+  <p id="vastaus"></p>
+
+  <script>
+    function summa() {
+      let luku1 = Number(document.getElementById("luku1").value);
+      let luku2 = Number(document.getElementById("luku2").value);
+      luku3 = luku1 + luku2;
+      document.getElementById("vastaus").innerText = luku3;
+    }
+  </script>
+</body>
+</html>
+

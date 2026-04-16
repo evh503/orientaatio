@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitus 19 - Lämpötilan muunnin</title>
+</head>
+<body>
+  <p>Anna kaksi lukua</p>
+  <input type="number" id="luku1" placeholder="Anna luku 1">
+  <button onclick="muunnin()">Muunna</button>
+  <p id="vastaus"></p>
+
+  <script>
+    function muunnin() {
+      let luku1 = Number(document.getElementById("luku1").value);
+      luku2 = luku1 * 1.8 + 32;
+      document.getElementById("vastaus").innerText = luku2;
+    }
+  </script>
+</body>
+</html>
