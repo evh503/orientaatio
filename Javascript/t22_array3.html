@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Harjoitus 22 - Array 3</title>
+</head>
+<body>
+  <p id="vastaus"></p>
+
+  <script>
+    let kaupungit= ["Tampere", "Pori"];
+    kaupungit.push("Oulu");
+    let teksti = "";
+    for ( let i = 0; i < kaupungit.length; i++) {
+      teksti += kaupungit[i] + "<br>";
+    }
+
+    document.getElementById("vastaus").innerHTML = teksti;
+  </script>
+</body>
+</html>

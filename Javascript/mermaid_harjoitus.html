@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mermaid-kirjaston Harjoitus</title>
+    <link href="mermaid_harjoitus.css" rel="stylesheet">
+</head>
+  <body>
+
+    <h1>Mermaid-kirjaston käyttö</h1>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+
+    <pre class="mermaid">
+      flowchart TD 
+        A[Halua oppia] -->|etsi kurssi| B(hae kurssille)
+        B --> C{suorita orientaatio}
+        C -->|onnistu| D[aloita opiskelu]
+        C -->|epäonnistu| E[yritä uudelleen]
+    </pre>
+
+  </body>
+</html>
+

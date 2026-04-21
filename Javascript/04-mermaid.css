@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mermaid {
+  width: 80vw;
+  max-width: 50em; 
+}
+
