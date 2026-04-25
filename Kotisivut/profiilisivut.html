@@ -17,12 +17,13 @@
             <li><a href="#koulutus">Koulutus</a></li>
             <li><a href="#tyohistoria">Työhistoria</a></li>
             <li><a href="#osaaminen">Osaaminen</a></li>
+            <li><a href="#kaavio">Tarvitsen nettisivut</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <section id="koulutus">
-      <div id="koulutus">
+      <div>
         <h2>Koulutus</h2>
         <p>Olen valmistunut datanomiksi vuonna 2024, josta jatkoin opiskeluja
           ammattikorkeakouluun tietojenkäsittelyn tradenomiksi. <br>
@@ -32,7 +33,7 @@
       </div>
     </section>
     <section id="tyohistoria">
-      <div id="tyohistoria">
+      <div>
         <h2>Työhistoria</h2>
         <p>Työurani alkoi monen muun tapaan kaupan kassalta. sen jälkeen Olen
           keskittynyt oman alani hommiin. <br>
@@ -41,12 +42,34 @@
       </div>
     </section>
     <section id="osaaminen">
-      <div id="osaaminen">
+      <div>
         <h2>Osaaminen</h2>
         <p>Internet sivujen tuottaminen käyttäen seuraavia: <br>
           HTML, CSS ja JavaScript <br>
           Minulla on myös perustason osaaminen Python-kielestä.
         </p>
+      </div>
+    </section>
+    <section id="kaavio">
+      <div>
+        <h2>Mistä nettisivut?</h2>
+        <p>Tarvitseeko esimerkiksi yrityksesi nettisivut, mutta et tiedä mitä
+          tehdä?<br>Ei hätää, seuraava kaavio auttaa sinua tekemään päätöksen 
+          hetkessä!
+        </p>
+        <script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+          mermaid.initialize({ startOnLoad: true });
+        </script>
+        <pre class="mermaid">
+          flowchart TD
+              A[Osaanko tehdä nettisivut]
+              A --> |En| B(Tilaan palvelun)
+              A --> |Kyllä| C{Riittääkö aikani?}
+              C --> |Kyllä| D[Teen itse!]
+              C --> |Ei| E[Parempi siis tilata]
+              B --> |Mahtavaa| F[Ota yhteyttä: \n example@email.com]
+        </pre>
       </div>
     </section>
     <footer>

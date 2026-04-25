@@ -1,5 +1,7 @@
+/* Tuodaan fontti Google-fonts palvelusta */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*  Määritellään värit ja muita arvoja. */
 :root {
   --primary-dark:#03045e;
   --primary: #00b4d8;
@@ -19,8 +21,9 @@
   box-sizing: border-box;
 }
 
+/* Määritellään koko dokumenttia koskevia asetuksia. */
 body {
-  font-family: Roboto;
+  font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -29,24 +32,26 @@ body {
 }
 
 header, section {
-  min-height: 100vh;  
-  display: flex;
+  min-height: 100vh;  /* vh = viewport height, eli tässä koko korkeus.*/
+  display: flex; /* rivit 36-39 keskittävät sisällön elementin keskelle */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1.5em;
 }
 
+/* Lisätään taustakuva header osiolle */
 header {
   background-image: url("taustakuva.avif");
   background-size: cover;
   background-position: top;
 }
 
+/* Kohdistuu välittömästi header alla oleviin div, ei muihin. */
 header > div {
   font-size: 150%;
   background-color: var(--neutral-darkest-alpha);
-  border-radius: calc(var(--border-radius) * 4);
+  border-radius: calc(var(--border-radius) * 30);
   padding: 4em;
   padding-left: 10em;
   padding-right: 10em;
@@ -57,6 +62,7 @@ header > div {
   align-items: center;
 }
 
+/* Kohdistuu KAIKKIIN nav alla oleviin ul-elementteihin*/
 nav ul {
   display: flex;
   align-items: center;
@@ -65,6 +71,7 @@ nav ul {
   margin-top: 2em;
 }
 
+/* Kohdistuu KAIKKIIN nav alla oleviin li-elementteihin*/
 nav li {
   list-style-type: none;  
   background-color: var(--primary-dark);  
@@ -73,11 +80,13 @@ nav li {
   border-radius: var(--border-radius);
 }
 
+/* Kohdistuu KAIKKIIN nav alla oleviin a-elementteihin*/
 nav a {
   color: var(--neutral);
   text-decoration: none;
 } 
 
+/* Muutetaan tyyliö, kun hiiri on elementin päällä.*/
 nav li:hover {
   background-color: var(--neutral);
 }
@@ -86,35 +95,48 @@ nav li:hover a {
   color: var(--neutral-darkest);
 }
 
+/* Taustavärit ja tekstin väri muille section:lle*/
 section {
   background-color: var(--neutral);
   color: var(--neutral-darkest);
 }
 
+/* Parittomat section-elementit eri väriseksi helpottamaan erottelua.*/
 section:nth-child(odd) {
   background-color: var(--neutral-lightest);
 }
 
+/* Rajoitetaan teksirivin pituus aiemmin määriteltyyn maksimiin ja lisätään
+marginaalia lukemisen helpottamiseksi */
 header p, section p {
   max-width: var(--max-width);
   margin: 0.5em 0;
 }
 
+/* Määritellään otsikko-elementit eri kokoisiksi */
 h1 {
   font-size: 300%;
   margin: 1em 0 0.5em 0;
 }
 h2 {
   font-size: 250%;
-  margin: 1em 0;
+  margin: 0.8em 0;
 }
 
-.koulutus {
+/* Keskitetään osioiden sisältö  */
+section div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   max-width: calc(var(--max-width) * 1.5);
   margin-top: 1em;
+}
+
+.mermaid {
+  width: 80vw;
+  max-width: 50em; 
+  margin-top: 2em;
 }
 
 footer {
