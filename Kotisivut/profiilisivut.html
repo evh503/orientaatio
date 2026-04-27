@@ -44,10 +44,42 @@
     <section id="osaaminen">
       <div>
         <h2>Osaaminen</h2>
-        <p>Internet sivujen tuottaminen käyttäen seuraavia: <br>
-          HTML, CSS ja JavaScript <br>
-          Minulla on myös perustason osaaminen Python-kielestä.
+        <p>Internet sivujen tuottaminen käyttäen seuraavia: HTML, CSS ja 
+          JavaScript. Minulla on myös perustason osaaminen Python-kielestä.<br>
+          Voit tutustua minuun tarkemmin alla:
         </p>
+        <p>
+          Julkiset projektit: <span id="gitProjektit"></span><br>
+          Seuraajat: <span id="gitSeuraajat"></span><br>
+          Sivut: <span id="gitSivut"></span>
+        </p>
+        <script>
+          async function haeGitHub() {
+            let kayttajanimi = "evh503"
+            const apiUrl = "https://api.github.com/users/"+kayttajanimi
+            try {
+              const vastaus = await fetch(apiUrl)
+              const tiedot = await vastaus.json()
+              console.log(tiedot)
+              document.getElementById("gitProjektit").innerHTML = 
+              tiedot.public_repos
+              document.getElementById("gitSeuraajat").innerHTML = 
+              tiedot.followers
+              
+              let linkkiElementti = document.createElement("a")
+              let linkkiTeksti = document.createTextNode("GitHub") 
+              linkkiElementti.appendChild(linkkiTeksti)
+              linkkiElementti.href = tiedot.html_url 
+              linkkiElementti.target = "_blank"
+              let elementti = document.getElementById("gitSivut")
+              elementti.append(linkkiElementti)
+            }
+            catch(virhe) {
+              console.log(virhe)
+            }
+          }
+          window.onload = haeGitHub()
+        </script>
       </div>
     </section>
     <section id="kaavio">
@@ -63,11 +95,11 @@
         </script>
         <pre class="mermaid">
           flowchart TD
-              A[Osaanko tehdä nettisivut]
-              A --> |En| B(Tilaan palvelun)
+              A[Osaanko tehdä nettisivut?]
+              A --> |En| B(Tilaan palvelun.)
               A --> |Kyllä| C{Riittääkö aikani?}
               C --> |Kyllä| D[Teen itse!]
-              C --> |Ei| E[Parempi siis tilata]
+              C --> |Ei| E[Parempi siis tilata.]
               B --> |Mahtavaa| F[Ota yhteyttä: \n example@email.com]
         </pre>
       </div>
